@@ -30,4 +30,11 @@ public class CounterViewModels extends ViewModel {
     }
 
     //TODO : Tambahkan Implementasi View Model Untuk Reset Point
+    public void resetScore(){
+        score.setAwayScore(0);
+        score.setHomeScore(0);
+        scoreMutableLiveData.setValue(score);
+        Log.d("Score has reset, Away:", String.valueOf(score.getAwayScore()));
+        Log.d("Home:", String.valueOf(score.getHomeScore()));
+    }
 }
